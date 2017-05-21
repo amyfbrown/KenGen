@@ -22,7 +22,7 @@ def divUpToMax(cageprod, maxval):
 
 def possSumValues(cagesum, numcells, maxval):
     """ returns a list of the possible sums for a cell """
-    posvals = range(1,maxval + 1)
+    posvals = list(range(1,maxval + 1))
     posssums = []
 
     if numcells > 2:
@@ -46,7 +46,7 @@ def possSumValues(cagesum, numcells, maxval):
         return twosum
 
     else:
-        print "WHUT?"
+        print("WHUT?")
         return
 
 def possProdValues(cageprod, numcells, maxval):
@@ -75,7 +75,7 @@ def possProdValues(cageprod, numcells, maxval):
         return twoprod
 
     else:
-        print "WHUT?"
+        print("WHUT?")
         return
 
 
@@ -93,7 +93,7 @@ class Cage:
         self.cagedata = [' ']*self.numcells     # this holds the numbers in the cells of the ordered coordinates in the cage
 
         if len(location) != numcells:
-            print "ERROR; NUMCELLS DOES NOT MATCH LOCATION DATA"
+            print("ERROR; NUMCELLS DOES NOT MATCH LOCATION DATA")
             return
 
         # c = Cage(3,4,40,'x',[[0,0],[1,1],[0,1]])
@@ -180,7 +180,7 @@ class Cage:
 
         elif op == '-':                         # numcells should be 2
             if numcells != 2:
-                print "WHUT?"
+                print("WHUT?")
             for i in range(1,maxval+1):
                 for j in range(i+1,maxval+1):
                     if j-i == result:
@@ -189,7 +189,7 @@ class Cage:
 
         elif op == '/':                         # numcells should be 2
             if numcells != 2:
-                print "WHUT?"
+                print("WHUT?")
             for i in range(1,maxval+1):
                 for j in range(i+1,maxval+1):
                     if j/i == result and j%i == 0:
@@ -229,7 +229,7 @@ class Grid:
         for i in range(len(self.LoC)):
             c = self.LoC[i]
             if c.maxvalue != cage0.maxvalue:
-                print "ERROR; CAGE MAXVALUES DO NOT MATCH"
+                print("ERROR; CAGE MAXVALUES DO NOT MATCH")
                 return
         self.size = cage0.maxvalue
         
