@@ -1,4 +1,4 @@
-# Amy Brown
+# lemniscateoo
 #
 # KenKen generator
 #
